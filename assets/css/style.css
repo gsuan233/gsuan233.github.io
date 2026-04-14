@@ -550,6 +550,26 @@ ul { list-style: none; }
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0);    }
 }
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50%      { opacity: 0.9;  }
+}
+
+/* ── 星空背景 ── */
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.starfield__star {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--color-accent);
+  animation: twinkle var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
 
 /* ════════════════════════════
    RWD — Tablet（< 900px）

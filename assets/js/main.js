@@ -182,3 +182,24 @@ document.addEventListener('click', (e) => {
     burger.setAttribute('aria-expanded', 'false');
   }
 });
+
+// ── 星空背景 ─────────────────────────────────────────
+(function initStarfield() {
+  const container = document.getElementById('starfield');
+  if (!container) return;
+  const COUNT = 80;
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < COUNT; i++) {
+    const star = document.createElement('span');
+    star.className = 'starfield__star';
+    const size = Math.random() * 3 + 1;          // 1–4 px
+    star.style.width  = size + 'px';
+    star.style.height = size + 'px';
+    star.style.left   = Math.random() * 100 + '%';
+    star.style.top    = Math.random() * 100 + '%';
+    star.style.setProperty('--dur',   (Math.random() * 4 + 2) + 's');   // 2–6 s
+    star.style.setProperty('--delay', (Math.random() * 5) + 's');       // 0–5 s
+    frag.appendChild(star);
+  }
+  container.appendChild(frag);
+})();
