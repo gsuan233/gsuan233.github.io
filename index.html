@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="夏日柑檸茶" />
+  <title>夏日柑檸茶</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=2" />
+</head>
+<body>
+
+  <!-- ── 導覽列 ── -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav__logo" href="index.html">🍋 夏日柑檸茶</a>
+      <ul class="nav__links">
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#pricing">價目表</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="開啟選單" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── 自我介紹 ── -->
+    <section class="section intro" id="about">
+      <div class="container intro__layout">
+        <div class="intro__photo-wrap">
+          <img class="intro__photo" src="assets/images/profile.jpg" alt="畫家照片" />
+        </div>
+        <div class="intro__text">
+          <h1 class="intro__name">何柑酸</h1>
+          <p class="intro__tagline">在這裡寫上一個句子</p>
+          <p class="intro__bio">
+            在這裡寫上你的自我介紹。可以描述你的創作理念、風格、使用的媒材，以及任何你想讓觀者知道的事情。
+          </p>
+          <div class="intro__links">
+            <a class="btn btn--primary" href="#pricing">查看價目表</a>
+            <a class="btn btn--outline" href="https://www.facebook.com/he.gan.suan" target="_blank" rel="noopener noreferrer">聯絡我</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 價目表 + 內嵌作品瀏覽 ── -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <h2 class="section__title">委託價目表</h2>
+        <p class="section__subtitle">點擊類型可瀏覽該類別的作品範例</p>
+
+        <!-- ── 注意事項 ── -->
+        <div class="notice" id="notice">
+          <button class="notice__toggle" aria-expanded="false" aria-controls="noticeBody">
+            <h3 class="notice__heading">📌 注意事項（委託前請詳閱）</h3>
+            <span class="notice__arrow">▾</span>
+          </button>
+          <div class="notice__body" id="noticeBody" hidden>
+
+            <div class="notice__grid">
+
+              <div class="notice__block">
+                <h4>非商用</h4>
+                <ul>
+                  <li>會婉拒不擅長的設定</li>
+                  <li>委託圖不可丟進 AI 算圖，可自行二改不需告知</li>
+                  <li>完成委託後會發佈在個人相簿中作為例圖，不公開、到時間後公開可提出</li>
+                  <li>自作發言不可</li>
+                </ul>
+              </div>
+
+              <div class="notice__block">
+                <h4>不接項目</h4>
+                <ul>
+                  <li>官方禁止之作品</li>
+                  <li>機甲、肌肉男、老人</li>
+                  <li>極複雜設定（ex. 原神部分角色）若有換裝可接</li>
+                  <li>原神溫迪夢向</li>
+                </ul>
+              </div>
+
+              <div class="notice__block">
+                <h4>工期</h4>
+                <ul>
+                  <li>依照排單順序清稿，每張工期 2（簡單項目）～14（複雜項目）天不等</li>
+                </ul>
+              </div>
+
+              <div class="notice__block">
+                <h4>委託流程</h4>
+                <ul>
+                  <li><strong>一般項目：</strong>討論內容及定價 → 付款（半款）進入排單 → 排到通知開始 → 草稿 → 線稿 → 上色至完稿 → 確認稿件 → 完成（尾款結算）</li>
+                  <li><strong>一鍵出圖：</strong>提供設定、性格及其他硬性要求（不要什麼表情、動作等）→ 付款進入排單 → 排到通知開始 → 確認稿件 → 完稿</li>
+                  <li>後續可能會以後付為主</li>
+                </ul>
+              </div>
+
+              <div class="notice__block">
+                <h4>付款相關</h4>
+                <ul>
+                  <li>郵局匯款、無摺</li>
+                  <li>中信匯款、無卡</li>
+                  <li>商用委託 ×2，VTB 使用一律算商用</li>
+                </ul>
+              </div>
+
+              <div class="notice__block">
+                <h4>修改次數</h4>
+                <ul>
+                  <li>草稿可大改一次、小改三次，線稿三次，完稿兩次</li>
+                  <li>一鍵出圖項目僅設定錯誤可修改</li>
+                  <li>設定畫錯的修改不算入修改次數中，但若與其他修改（ex. 眼睛往下移一點）一起提出則合併算一次</li>
+                  <li>多一次修改 +100</li>
+                </ul>
+              </div>
+
+              <div class="notice__block notice__block--highlight">
+                <h4>其他</h4>
+                <ul>
+                  <li>委託並非必需品，請務必考量！</li>
+                  <li>請務必看完例圖再考慮委託，勿因一張圖就被我騙了！</li>
+                  <li>未付款前可以隨時取消排單</li>
+                </ul>
+              </div>
+
+            </div><!-- /notice__grid -->
+
+          </div><!-- /notice__body -->
+        </div><!-- /notice -->
+
+        <div class="pricing-grid">
+
+          <!-- 偽像素 Q 頭 -->
+          <article class="price-card" data-category="pixel">
+            <div class="price-card__header">
+              <span class="price-card__icon">👾</span>
+              <h3 class="price-card__title">偽像素 Q 頭 <span class="badge badge--quick">一鍵出圖</span></h3>
+            </div>
+            <ul class="price-card__list">
+              <li><span>價格</span><span class="price-card__price">NT$ 350</span></li>
+              <li><span>畫布尺寸</span><span class="price-card__price">350px*350px</span></li>
+            </ul>
+            <button class="btn btn--outline btn--sm price-card__browse" data-category="pixel">
+              瀏覽作品
+            </button>
+          </article>
+
+          <!-- 淡彩半身塗鴉 -->
+          <article class="price-card" data-category="lightcolor">
+            <div class="price-card__header">
+              <span class="price-card__icon">🌸</span>
+              <h3 class="price-card__title">淡彩半身塗鴉 <span class="badge badge--quick">一鍵出圖</span></h3>
+            </div>
+            <ul class="price-card__list">
+              <li><span>價格</span><span class="price-card__price">NT$ 500/人</span></li>
+              <li><span>畫布尺寸</span><span class="price-card__price">2048px*2048px</span></li>
+            </ul>
+            <button class="btn btn--outline btn--sm price-card__browse" data-category="lightcolor">
+              瀏覽作品
+            </button>
+          </article>
+
+          <!-- 組合頁 -->
+          <article class="price-card" data-category="composite">
+            <div class="price-card__header">
+              <span class="price-card__icon">📋</span>
+              <h3 class="price-card__title">組合頁</h3>
+            </div>
+            <ul class="price-card__list">
+              <li><span>價格</span><span class="price-card__price">NT$ 2000/人</span></li>
+              <li><span class="price-card__explanation">半身+胸像+胸像 <b>or</b> 全身+半身</span></li>
+            </ul>
+            <button class="btn btn--outline btn--sm price-card__browse" data-category="composite">
+              瀏覽作品
+            </button>
+          </article>
+
+          <!-- 包兩天 -->
+          <article class="price-card" data-category="cover">
+            <div class="price-card__header">
+              <span class="price-card__icon">📆</span>
+              <h3 class="price-card__title">包兩天</h3>
+            </div>
+            <ul class="price-card__list">
+              <li><span>價格</span><span class="price-card__price">NT$ 4500</span></li>
+              <li><span class="price-card__explanation">兩天各畫6hr<br>保底2摸魚插+立繪+q版/證件照<br>（皆可替換）</span></li>
+            </ul>
+            <button class="btn btn--outline btn--sm price-card__browse" data-category="cover">
+              瀏覽作品
+            </button>
+          </article>
+
+          <!-- 正比半身 -->
+          <article class="price-card" data-category="halfbody">
+            <div class="price-card__header">
+              <span class="price-card__icon">👤</span>
+              <h3 class="price-card__title">正比半身</h3>
+            </div>
+            <ul class="price-card__list">
+              <li><span>價格</span><span class="price-card__price">單人 NT$ 1800+</span></li>
+              <li><span></span><span class="price-card__price">雙人 NT$ 3000+</span></li>
+              <li><span>畫布尺寸</span><span class="price-card__price">3000*4000px</span></li>
+              <li><span class="price-card__explanation">豎版構圖，畫至腰~膝蓋</span></li>
+            </ul>
+            <button class="btn btn--outline btn--sm price-card__browse" data-category="halfbody">
+              瀏覽作品
+            </button>
+          </article>
+
+          <!-- 正比全身 -->
+          <article class="price-card" data-category="fullbody">
+            <div class="price-card__header">
+              <span class="price-card__icon">🧍</span>
+              <h3 class="price-card__title">正比全身</h3>
+            </div>
+            <ul class="price-card__list">
+              <li><span>價格</span><span class="price-card__price">單人 NT$ 2300+</span></li>
+              <li><span></span><span class="price-card__price">雙人 NT$ 3500+</span></li>
+              <li><span>畫布尺寸</span><span class="price-card__price">3000*4000px</span></li>
+              <li><span class="price-card__explanation">豎版構圖，可改橫版，帶背景<br>這個例圖少，喜歡畫有氛圍感和故事的背景（P2）</span></li>
+            </ul>
+            <button class="btn btn--outline btn--sm price-card__browse" data-category="fullbody">
+              瀏覽作品
+            </button>
+          </article>
+
+          <!-- 立繪（暫停接單） -->
+          <article class="price-card is-paused" data-category="vertical">
+            <div class="price-card__header">
+              <span class="price-card__icon">🗿</span>
+              <h3 class="price-card__title">立繪 <span class="badge badge--paused">暫停接單</span></h3>
+            </div>
+            <ul class="price-card__list">
+              <li><span>價格</span><span class="price-card__price">二分 NT$ 1500</span></li>
+              <li><span></span><span class="price-card__price">精細 NT$ 1800+</span></li>
+              <li><span>畫布尺寸</span><span class="price-card__price">畫布A4，300dpi</span></li>
+            </ul>
+            <button class="btn btn--outline btn--sm price-card__browse" data-category="vertical">
+              瀏覽作品
+            </button>
+          </article>
+
+          <!-- 拍立得 -->
+          <article class="price-card" data-category="polaroid">
+            <div class="price-card__header">
+              <span class="price-card__icon">📸</span>
+              <h3 class="price-card__title">拍立得</h3>
+            </div>
+            <ul class="price-card__list">
+              <li><span>價格</span><span class="price-card__price">NT$ 1000</span></li>
+              <li><span>畫布尺寸</span><span class="price-card__price">2048px*2048px</span></li>
+            </ul>
+            <button class="btn btn--outline btn--sm price-card__browse" data-category="polaroid">
+              瀏覽作品
+            </button>
+          </article>
+
+          <!-- Q插 -->
+          <article class="price-card" data-category="chibi">
+            <div class="price-card__header">
+              <span class="price-card__icon">✨</span>
+              <h3 class="price-card__title">Q插</h3>
+            </div>
+            <ul class="price-card__list">
+              <li><span>價格</span><span class="price-card__price">單人 NT$ 800+</span></li>
+              <li><span></span><span class="price-card__price">雙人 NT$ 1200+</span></li>
+              <li><span>畫布尺寸</span><span class="price-card__price">2048px*2048px</span></li>
+            </ul>
+            <button class="btn btn--outline btn--sm price-card__browse" data-category="chibi">
+              瀏覽作品
+            </button>
+          </article>
+
+          <!-- 水彩 -->
+          <article class="price-card" data-category="watercolor">
+            <div class="price-card__header">
+              <span class="price-card__icon">💧</span>
+              <h3 class="price-card__title">水彩</h3>
+            </div>
+            <ul class="price-card__list">
+              <li><span>價格</span><span class="price-card__price">NT$ 500/人</span></li>
+              <li><span>畫布尺寸</span><span class="price-card__price">2048px*2048px</span></li>
+            </ul>
+            <button class="btn btn--outline btn--sm price-card__browse" data-category="watercolor">
+              瀏覽作品
+            </button>
+          </article>
+
+        </div><!-- /pricing-grid -->
+
+        <!-- ── 內嵌作品快速瀏覽（不跳頁） ── -->
+        <div class="inline-gallery" id="inlineGallery">
+          <div class="inline-gallery__header">
+            <h3 class="inline-gallery__title" id="inlineGalleryTitle">水彩作品</h3>
+            <button class="inline-gallery__close" aria-label="關閉作品瀏覽">✕</button>
+          </div>
+          <div class="inline-gallery__track" id="inlineGalleryTrack">
+
+            <!-- ── 偽像素 Q 頭 ── -->
+            <article class="gallery-card" data-category="pixel" data-src="assets/images/pixel-1.jpg" data-title="偽像素 Q 頭 一">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/pixel-1.jpg" alt="偽像素 Q 頭 一" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>偽像素 Q 頭 一</h4></div>
+            </article>
+            <article class="gallery-card" data-category="pixel" data-src="assets/images/pixel-2.jpg" data-title="偽像素 Q 頭 二">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/pixel-2.jpg" alt="偽像素 Q 頭 二" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>偽像素 Q 頭 二</h4></div>
+            </article>
+            <article class="gallery-card" data-category="pixel" data-src="assets/images/pixel-3.jpg" data-title="偽像素 Q 頭 三">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/pixel-3.jpg" alt="偽像素 Q 頭 三" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>偽像素 Q 頭 三</h4></div>
+            </article>
+
+            <!-- ── 淡彩半身塗鴉 ── -->
+            <article class="gallery-card" data-category="lightcolor" data-src="assets/images/lightcolor-1.jpg" data-title="淡彩半身塗鴉 一">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/lightcolor-1.jpg" alt="淡彩半身塗鴉 一" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>淡彩半身塗鴉 一</h4></div>
+            </article>
+            <article class="gallery-card" data-category="lightcolor" data-src="assets/images/lightcolor-2.jpg" data-title="淡彩半身塗鴉 二">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/lightcolor-2.jpg" alt="淡彩半身塗鴉 二" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>淡彩半身塗鴉 二</h4></div>
+            </article>
+            <article class="gallery-card" data-category="lightcolor" data-src="assets/images/lightcolor-3.jpg" data-title="淡彩半身塗鴉 三">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/lightcolor-3.jpg" alt="淡彩半身塗鴉 三" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>淡彩半身塗鴉 三</h4></div>
+            </article>
+
+            <!-- ── 組合頁 ── -->
+            <article class="gallery-card" data-category="composite" data-src="assets/images/composite-1.jpg" data-title="組合頁 一">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/composite-1.jpg" alt="組合頁 一" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>組合頁 一</h4></div>
+            </article>
+            <article class="gallery-card" data-category="composite" data-src="assets/images/composite-2.jpg" data-title="組合頁 二">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/composite-2.jpg" alt="組合頁 二" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>組合頁 二</h4></div>
+            </article>
+            <article class="gallery-card" data-category="composite" data-src="assets/images/composite-3.jpg" data-title="組合頁 三">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/composite-3.jpg" alt="組合頁 三" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>組合頁 三</h4></div>
+            </article>
+
+            <!-- ── 包兩天 ── -->
+            <article class="gallery-card" data-category="cover" data-src="assets/images/cover-1.jpg" data-title="包兩天 一">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/cover-1.jpg" alt="包兩天 一" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>包兩天 一</h4></div>
+            </article>
+            <article class="gallery-card" data-category="cover" data-src="assets/images/cover-2.jpg" data-title="包兩天 二">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/cover-2.jpg" alt="包兩天 二" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>包兩天 二</h4></div>
+            </article>
+            <article class="gallery-card" data-category="cover" data-src="assets/images/cover-3.jpg" data-title="包兩天 三">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/cover-3.jpg" alt="包兩天 三" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>包兩天 三</h4></div>
+            </article>
+
+            <!-- ── 正比半身 ── -->
+            <article class="gallery-card" data-category="halfbody" data-src="assets/images/halfbody-1.jpg" data-title="正比半身 一">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/halfbody-1.jpg" alt="正比半身 一" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>正比半身 一</h4></div>
+            </article>
+            <article class="gallery-card" data-category="halfbody" data-src="assets/images/halfbody-2.jpg" data-title="正比半身 二">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/halfbody-2.jpg" alt="正比半身 二" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>正比半身 二</h4></div>
+            </article>
+            <article class="gallery-card" data-category="halfbody" data-src="assets/images/halfbody-3.jpg" data-title="正比半身 三">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/halfbody-3.jpg" alt="正比半身 三" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>正比半身 三</h4></div>
+            </article>
+
+            <!-- ── 正比全身 ── -->
+            <article class="gallery-card" data-category="fullbody" data-src="assets/images/fullbody-1.jpg" data-title="正比全身 一">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/fullbody-1.jpg" alt="正比全身 一" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>正比全身 一</h4></div>
+            </article>
+            <article class="gallery-card" data-category="fullbody" data-src="assets/images/fullbody-2.jpg" data-title="正比全身 二">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/fullbody-2.jpg" alt="正比全身 二" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>正比全身 二</h4></div>
+            </article>
+            <article class="gallery-card" data-category="fullbody" data-src="assets/images/fullbody-3.jpg" data-title="正比全身 三">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/fullbody-3.jpg" alt="正比全身 三" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>正比全身 三</h4></div>
+            </article>
+
+            <!-- ── 立繪 ── -->
+            <article class="gallery-card" data-category="vertical" data-src="assets/images/vertical-1.jpg" data-title="立繪 一">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/vertical-1.jpg" alt="立繪 一" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>立繪 一</h4></div>
+            </article>
+            <article class="gallery-card" data-category="vertical" data-src="assets/images/vertical-2.jpg" data-title="立繪 二">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/vertical-2.jpg" alt="立繪 二" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>立繪 二</h4></div>
+            </article>
+            <article class="gallery-card" data-category="vertical" data-src="assets/images/vertical-3.jpg" data-title="立繪 三">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/vertical-3.jpg" alt="立繪 三" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>立繪 三</h4></div>
+            </article>
+
+            <!-- ── 拍立得 ── -->
+            <article class="gallery-card" data-category="polaroid" data-src="assets/images/polaroid-1.jpg" data-title="拍立得 一">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/polaroid-1.jpg" alt="拍立得 一" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>拍立得 一</h4></div>
+            </article>
+            <article class="gallery-card" data-category="polaroid" data-src="assets/images/polaroid-2.jpg" data-title="拍立得 二">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/polaroid-2.jpg" alt="拍立得 二" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>拍立得 二</h4></div>
+            </article>
+            <article class="gallery-card" data-category="polaroid" data-src="assets/images/polaroid-3.jpg" data-title="拍立得 三">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/polaroid-3.jpg" alt="拍立得 三" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>拍立得 三</h4></div>
+            </article>
+
+            <!-- ── Q插 ── -->
+            <article class="gallery-card" data-category="chibi" data-src="assets/images/chibi-1.jpg" data-title="Q插 一">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/chibi-1.jpg" alt="Q插 一" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>Q插 一</h4></div>
+            </article>
+            <article class="gallery-card" data-category="chibi" data-src="assets/images/chibi-2.jpg" data-title="Q插 二">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/chibi-2.jpg" alt="Q插 二" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>Q插 二</h4></div>
+            </article>
+            <article class="gallery-card" data-category="chibi" data-src="assets/images/chibi-3.jpg" data-title="Q插 三">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/chibi-3.jpg" alt="Q插 三" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>Q插 三</h4></div>
+            </article>
+
+            <!-- ── 水彩 ── -->
+            <article class="gallery-card" data-category="watercolor" data-src="assets/images/watercolor-1.jpg" data-title="水彩 一">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/watercolor-1.jpg" alt="水彩 一" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>水彩 一</h4></div>
+            </article>
+            <article class="gallery-card" data-category="watercolor" data-src="assets/images/watercolor-2.jpg" data-title="水彩 二">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/watercolor-2.jpg" alt="水彩 二" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>水彩 二</h4></div>
+            </article>
+            <article class="gallery-card" data-category="watercolor" data-src="assets/images/watercolor-3.jpg" data-title="水彩 三">
+              <div class="gallery-card__img-wrap">
+                <img src="assets/images/watercolor-3.jpg" alt="水彩 三" loading="lazy" />
+              </div>
+              <div class="gallery-card__info"><h4>水彩 三</h4></div>
+            </article>
+
+          </div><!-- /track -->
+        </div><!-- /inline-gallery -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── 頁尾 ── -->
+  <footer class="site-footer">
+    <p>© 2026 夏日柑檸茶</p>
+  </footer>
+
+  <!-- ── Lightbox ── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="放大圖片">
+    <button class="lightbox__close" aria-label="關閉">✕</button>
+    <button class="lightbox__prev" aria-label="上一張">‹</button>
+    <button class="lightbox__next" aria-label="下一張">›</button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" src="" alt="" />
+      <figcaption class="lightbox__caption"></figcaption>
+    </figure>
+  </div>
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+
+  <script src="assets/js/main.js?v=2"></script>
+</body>
+</html>
