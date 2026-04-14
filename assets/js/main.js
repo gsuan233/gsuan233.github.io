@@ -17,11 +17,16 @@ const inlineGallery  = document.getElementById('inlineGallery');
 const galleryTitle   = document.getElementById('inlineGalleryTitle');
 const galleryTrack   = document.getElementById('inlineGalleryTrack');
 const galleryClose   = inlineGallery.querySelector('.inline-gallery__close');
+const galleryBackdrop = document.getElementById('galleryBackdrop');
 const allCards       = Array.from(galleryTrack.querySelectorAll('.gallery-card'));
 const browseButtons  = document.querySelectorAll('.price-card__browse');
 const priceCards     = document.querySelectorAll('.price-card');
 
 let activeCategory = null;
+
+function isMobile() {
+  return window.matchMedia('(max-width: 600px)').matches;
+}
 
 function showCategory(category) {
   // 切換類別篩選
@@ -31,20 +36,28 @@ function showCategory(category) {
 
   galleryTitle.textContent = categoryLabels[category] || category;
   inlineGallery.classList.add('is-open');
+  galleryBackdrop.classList.add('is-open');
 
   // 高亮對應的價目卡
   priceCards.forEach(pc => pc.classList.toggle('is-active', pc.dataset.category === category));
 
   activeCategory = category;
 
-  // 滾動到作品區
-  inlineGallery.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  if (isMobile()) {
+    // 底部面板模式：鎖住背景捲動
+    document.body.style.overflow = 'hidden';
+  } else {
+    // 桌面模式：捲動到作品區
+    inlineGallery.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
 }
 
 function closeGallery() {
   inlineGallery.classList.remove('is-open');
+  galleryBackdrop.classList.remove('is-open');
   priceCards.forEach(pc => pc.classList.remove('is-active'));
   activeCategory = null;
+  document.body.style.overflow = '';
 }
 
 browseButtons.forEach(btn => {
@@ -60,6 +73,7 @@ browseButtons.forEach(btn => {
 });
 
 galleryClose.addEventListener('click', closeGallery);
+galleryBackdrop.addEventListener('click', closeGallery);
 
 // ── Lightbox ──────────────────────────────────────────
 const lightbox    = document.getElementById('lightbox');

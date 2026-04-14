@@ -382,6 +382,10 @@ ul { list-style: none; }
 /* ════════════════════════════
    內嵌作品快速瀏覽
 ════════════════════════════ */
+.gallery-backdrop {
+  display: none;
+}
+
 .inline-gallery {
   display: none;
   background: var(--color-surface);
@@ -611,9 +615,40 @@ ul { list-style: none; }
     gap: 1rem;
   }
 
-  /* 內嵌畫廊 */
+  /* 內嵌畫廊 → 底部滑出面板 */
+  .gallery-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 140;
+  }
+  .gallery-backdrop.is-open { display: block; }
+
+  .inline-gallery {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 150;
+    max-height: 70svh;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    box-shadow: 0 -4px 30px rgba(0,0,0,0.20);
+    transform: translateY(100%);
+    transition: transform 0.32s ease;
+    overflow: hidden;
+    animation: none;
+  }
+  .inline-gallery.is-open {
+    transform: translateY(0);
+  }
+  .inline-gallery__body {
+    overflow-y: auto;
+    max-height: calc(70svh - 52px);
+    -webkit-overflow-scrolling: touch;
+  }
   .inline-gallery__track {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     padding: 1rem;
     gap: 0.8rem;
   }

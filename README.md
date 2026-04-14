@@ -1,4 +1,4 @@
-# 夏日柑檸茶 · GitHub Pages
+git push -u origin main# 夏日柑檸茶 · GitHub Pages
 
 何柑酸的個人委託價目表與畫作展示網站。
 
