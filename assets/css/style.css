@@ -585,10 +585,11 @@ ul { list-style: none; }
     border-bottom: 1px solid var(--color-border);
     box-shadow: 0 8px 24px rgba(0,0,0,0.10);
     transform: translateY(-110%);
-    transition: transform var(--transition);
+    visibility: hidden;
+    transition: transform var(--transition), visibility var(--transition);
     z-index: 99;
   }
-  .nav--open .nav__links { transform: translateY(0); }
+  .nav--open .nav__links { transform: translateY(0); visibility: visible; }
   .nav__links li { padding: 0; }
   .nav__links a {
     display: block;
