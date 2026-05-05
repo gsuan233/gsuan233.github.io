@@ -187,7 +187,7 @@ document.addEventListener('click', (e) => {
 (function initStarfield() {
   const container = document.getElementById('starfield');
   if (!container) return;
-  const COUNT = 80;
+  const COUNT = 120;
   const frag = document.createDocumentFragment();
   for (let i = 0; i < COUNT; i++) {
     const star = document.createElement('span');
@@ -197,8 +197,13 @@ document.addEventListener('click', (e) => {
     star.style.height = size + 'px';
     star.style.left   = Math.random() * 100 + '%';
     star.style.top    = Math.random() * 100 + '%';
-    star.style.setProperty('--dur',   (Math.random() * 4 + 2) + 's');   // 2–6 s
-    star.style.setProperty('--delay', (Math.random() * 5) + 's');       // 0–5 s
+    // 隨機顏色：基於主色調的變化
+    const hue = 170 + Math.random() * 20 - 10; // 160-180 (藍綠色系)
+    const saturation = 70 + Math.random() * 20; // 70-90%
+    const lightness = 50 + Math.random() * 20; // 50-70%
+    star.style.background = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+    star.style.setProperty('--dur',   (Math.random() * 6 + 4) + 's');   // 4–10 s
+    star.style.setProperty('--delay', (Math.random() * 8) + 's');       // 0–8 s
     frag.appendChild(star);
   }
   container.appendChild(frag);
