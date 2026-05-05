@@ -48,6 +48,10 @@ python3 -m http.server 8000
 3. Source 選 `main` 分支，資料夾選 `/ (root)`
 4. 儲存後等約 1 分鐘即可上線
 
+## 網頁連結
+
+[夏日柑檸茶](https://gsuan233.github.io/)
+
 ## 色彩調整
 
 修改 `assets/css/style.css` 頂部的 CSS 變數即可快速換色：
